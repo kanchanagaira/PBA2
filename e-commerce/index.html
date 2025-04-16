@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini E-Commerce Site</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Mini Shop</h1>
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('wishlist')">Wishlist</a>
+    <a href="#" onclick="showSection('orders')">Orders</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </nav>
+</header>
+
+<div class="container">
+  <!-- Login/Register -->
+  <div id="auth">
+    <h2 class="section-title">Login or Register</h2>
+    <input type="text" id="username" placeholder="Enter username" />
+    <input type="password" id="password" placeholder="Enter password" />
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+    <p id="authMessage"></p>
+  </div>
+
+  <!-- Home -->
+  <div id="home" class="hidden">
+    <h2 class="section-title">Products</h2>
+    <div id="productList"></div>
+  </div>
+
+  <!-- Wishlist -->
+  <div id="wishlist" class="hidden">
+    <h2 class="section-title">Your Wishlist</h2>
+    <div id="wishlistItems"></div>
+  </div>
+
+  <!-- Order History -->
+  <div id="orders" class="hidden">
+    <h2 class="section-title">Order History</h2>
+    <div id="orderHistory"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
